@@ -21,4 +21,4 @@ Built during creation of the image:
 
 #  Usage
 
-If you start the container, your entrypoint is ```bash```. from where on you should know how to continue.
+If you start the container, your entrypoint is ```bash```, from where on you should know how to continue.
