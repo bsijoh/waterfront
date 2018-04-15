@@ -13,6 +13,7 @@ From the openSUSE repositories:
 * [scipy](https://www.scipy.org/)
 * [matplotlib](https://matplotlib.org/) with cairo and latex backend
 * [pandas](https://pandas.pydata.org/)
+* [jupyter](https://jupyter.org/)
 
 Built during creation of the image:
 
