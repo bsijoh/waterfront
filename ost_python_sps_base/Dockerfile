@@ -28,7 +28,7 @@ RUN zypper --non-interactive install \
     python3-matplotlib \
     python3-matplotlib-cairo \
     python3-matplotlib-latex \
-    pyrhon3-seaborn
+    pyrhon3-seaborn \
     python3-pandas \
     python3-pip \
     python3-jupyter \
