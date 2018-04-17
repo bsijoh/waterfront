@@ -4,7 +4,7 @@ LABEL description="Image containing the python3 stack for scientific computing w
 
 # these default values are used, if not provided while running build script
 ENV WATERFRONT_USER=morelia
-ENV WATERFRONT_UID uid=9999
+ENV WATERFRONT_UID=9999
 
 ######## CREATE USER
 # This is a dumb idea, only allowed for debbuging.
