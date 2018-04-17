@@ -2,6 +2,8 @@ FROM bsijoh/waterfront_python_sp:base
 
 LABEL description="Image containing the python3 stack for scientific computing with additional python modules (graph libraries)."
 
+ARG MAKETHREADS=1
+
 USER root
 
 # install devel-packages and build-tools for graph_tool
@@ -65,7 +67,7 @@ RUN ./autogen.sh
 #make configure script use python3
 RUN LD_LIBRARY_PATH=/usr/local/lib64:/usr/lib64 PYTHON=python3 ./configure
 # you may try with -jx, x>1 but memory!
-RUN make -j1
+RUN make -j$MAKETHREADS
 RUN make check
 RUN make install
 
