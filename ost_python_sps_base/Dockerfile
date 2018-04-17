@@ -1,6 +1,6 @@
 FROM opensuse:tumbleweed
 
-LABEL description="Image containing the python3 stack for scientific computing with some python modules built from source."
+LABEL description="Image containing the python3 stack for scientific computing."
 
 # these default values are used, if not provided while running build script
 ENV WATERFRONT_USER=morelia
