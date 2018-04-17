@@ -1,4 +1,4 @@
-FROM bsijoh/waterfront_python_sp_base
+FROM bsijoh/waterfront_python_sp:base
 
 LABEL description="Image containing the python3 stack for scientific computing with additional python modules (graph libraries)."
 
