@@ -36,7 +36,9 @@ RUN zypper --non-interactive install \
     python3-jupyter_notebook \
     python3-jupyter_notebook-latex \
     python3-jupyter_ipywidgets \
-    python3-jupyter_ipyparallel
+    python3-jupyter_ipyparallel \
+    z3 \
+    python3-z3
 
 ####### Finish Building Container
 WORKDIR /home/$WATERFRONT_USER/

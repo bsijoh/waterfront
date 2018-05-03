@@ -11,6 +11,7 @@ From the openSUSE repositories:
 * [python3](https://www.python.org/)
 * [numpy](http://www.numpy.org/)
 * [scipy](https://www.scipy.org/)
+* [z3](https://github.com/Z3Prover/z3.git) with python3 bindings
 * [matplotlib](https://matplotlib.org/) with cairo and latex backend
 * [seaborn](https://seaborn.pydata.org/)
 * [pandas](https://pandas.pydata.org/)
