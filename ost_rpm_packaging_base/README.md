@@ -8,6 +8,10 @@ This Docker image provides an environment for rpm-packaging. If packages can be 
 
 /!\ If this container is being run on a machine, where other users might attach to your container, they could access the OBS credentials.
 
+/!\ For reasons unknown, it seems that this container needs to be run in ```--privileged``` mode, else there is a problem with ```/dev/fd/62``` while building the package.
+
+__In conclusion__: Only run on your own computer.
+
 If you start the container, your entrypoint is ```bash```, from where on you should know how to continue.
 
 # openSUSE Build Service

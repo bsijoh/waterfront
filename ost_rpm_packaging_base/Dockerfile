@@ -37,6 +37,8 @@ RUN zypper --non-interactive install \
     
 
 ####### Finish Building Container
+ 
+
 # reset USER and WORKDIR
 USER $WATERFRONT_USER
 WORKDIR /home/$WATERFRONT_USER

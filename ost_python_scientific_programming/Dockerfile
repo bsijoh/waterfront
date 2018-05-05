@@ -9,18 +9,25 @@ ENV WATERFRONT_UID=9999
 ######## CREATE USER
 # This is a dumb idea, only allowed for debbuging.
 #RUN zypper --non-interactive in sudo
-#RUN useradd --create-home --shell /bin/bash --uid $uid $WATERFRONT_USER --groups users
+#RUN useradd --create-home --shell /bin/bash --uid $WATERFRONT_UID $WATERFRONT_USER --groups users
 #RUN echo "$WATERFRONT_USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # Use this one instead,
 RUN useradd --create-home --shell /bin/bash --uid $WATERFRONT_UID $WATERFRONT_USER --groups users
 
 
-###### Basic Packages
+###### Packages
+# repository for graph-tool
+RUN zypper --non-interactive --gpg-auto-import-keys addrepo \
+    --repo https://download.opensuse.org/repositories/home:/bsijoh/openSUSE_Tumbleweed/home:bsijoh.repo
+    
+RUN zypper --non-interactive --gpg-auto-import-keys refresh 
+
 RUN zypper --non-interactive install \
     vim \
     bash \
     git \
+    glibc-locale \
     sshfs \
     python3 \
     python3-numpy \
@@ -36,11 +43,28 @@ RUN zypper --non-interactive install \
     python3-jupyter_notebook \
     python3-jupyter_notebook-latex \
     python3-jupyter_ipywidgets \
-    python3-jupyter_ipyparallel \
+    python3-jupyter_ipyparallel
+
+# smt-solver
+RUN zypper --non-interactive install \    
     z3 \
+    z3-devel \
     python3-z3
 
+
+# install graph_tool from openSUSE Build Service    
+RUN zypper --non-interactive install \
+    python3-graph_tool
+    
+# non-packaged python tools
+RUN pip3 install networkx
+
 ####### Finish Building Container
+
+# set locale
+RUN sed "s/RC_LC_ALL=\"\"/RC_LC_ALL=\"en_US.UTF-8\"/g" --in-place /etc/sysconfig/language
+ENV LC_ALL="en_US.UTF-8"
+
 WORKDIR /home/$WATERFRONT_USER/
 RUN ldconfig
 
