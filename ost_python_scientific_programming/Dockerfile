@@ -57,7 +57,8 @@ RUN zypper --non-interactive install \
     python3-graph_tool
     
 # non-packaged python tools
-RUN pip3 install networkx
+RUN pip3 install networkx \
+    pysmt
 
 ####### Finish Building Container
 

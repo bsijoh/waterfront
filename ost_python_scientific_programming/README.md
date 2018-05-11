@@ -18,6 +18,7 @@ From the openSUSE repositories:
 * [jupyter](https://jupyter.org/)
 * [graph_tool](https://graph-tool.skewed.de/) installed from openSUSE Build Service
 * [networkx](https://networkx.github.io) installed from pip
+* [pysmt](https://stackoverflow.com/questions/23450572/which-logics-are-supported-by-z3) installed from pip
  
 
 #  Usage
