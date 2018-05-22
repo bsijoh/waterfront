@@ -1,4 +1,4 @@
-FROM opensuse:tumbleweed
+FROM opensuse/tumbleweed
 
 LABEL description="Image containing the python3 stack for scientific computing with additional python modules (graph libraries)."
 
