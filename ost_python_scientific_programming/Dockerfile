@@ -17,8 +17,10 @@ RUN useradd --create-home --shell /bin/bash --uid $WATERFRONT_UID $WATERFRONT_US
 
 
 ###### Packages
-# repository for graph-tool
-RUN zypper --non-interactive --gpg-auto-import-keys addrepo \
+# repository for own packages with higher priority
+RUN zypper --non-interactive \
+    --gpg-auto-import-keys addrepo \
+    --priority 90 \
     --repo https://download.opensuse.org/repositories/home:/bsijoh/openSUSE_Tumbleweed/home:bsijoh.repo
     
 RUN zypper --non-interactive --gpg-auto-import-keys refresh 
@@ -52,9 +54,10 @@ RUN zypper --non-interactive install \
     python3-z3
 
 
-# install graph_tool from openSUSE Build Service    
+# install stuff from openSUSE Build Service    
 RUN zypper --non-interactive install \
-    python3-graph_tool
+    python3-graph_tool \
+    python3-nlopt   
     
 # non-packaged python tools
 RUN pip3 install networkx \
