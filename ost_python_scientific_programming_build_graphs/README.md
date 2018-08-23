@@ -1,3 +1,6 @@
+#Deprecated!
+#/!\ not supported, as long as graph_tool can be build with [OBS](https://build.opensuse.org/package/show/home:bsijoh/python3-graph_tool)
+
 # About
 
 This Docker image which provides an environment with [python3](https://www.python.org/) and some packages for scientific computing.

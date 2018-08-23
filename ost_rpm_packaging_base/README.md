@@ -12,6 +12,11 @@ This Docker image provides an environment for rpm-packaging. If packages can be 
 
 __In conclusion__: Only run on your own computer.
 
+```
+docker pull bsijoh/waterfront_images:ost_rpm_packaging_base
+docker run --privileged --interactive --tty --name packaging_graphtool bsijoh/waterfront_images:ost_rpm_packaging_base
+```
+
 If you start the container, your entrypoint is ```bash```, from where on you should know how to continue.
 
 # openSUSE Build Service
@@ -30,6 +35,11 @@ __Commit__ changes in repository
 osc commit
 ```
 for this command, the current directory should be the directory of the package you were changing.
+
+__Add__ changed files (e.g. source files), when necessary.
+```
+osc add <file>
+```
 
 
 __Build__ from .spec-file

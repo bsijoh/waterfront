@@ -61,7 +61,8 @@ RUN zypper --non-interactive install \
     
 # non-packaged python tools
 RUN pip3 install networkx \
-    pysmt
+    pysmt \
+    pyomo
 
 ####### Finish Building Container
 
