@@ -1,6 +1,6 @@
 # About
 
-This Docker image which provides an environment with [python3](https://www.python.org/) and some packages for scientific computing.
+This Docker image which provides an environment with [python3](https://www.python.org/) and an assortment of hand-curated packages for scientific computing.
 This images is based on the official [openSUSE image](https://hub.docker.com/_/opensuse/).
 
 ## Provided software
@@ -20,6 +20,7 @@ From the openSUSE repositories:
 * [nlopt](http://ab-initio.mit.edu/nlopt) installed from openSUSE Build Service
 * [networkx](https://networkx.github.io) installed from pip
 * [pysmt](https://stackoverflow.com/questions/23450572/which-logics-are-supported-by-z3) installed from pip
+* [pyomo](http://www.pyomo.org) installed from pip
  
 
 #  Usage
