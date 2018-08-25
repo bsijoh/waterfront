@@ -15,13 +15,19 @@ From the openSUSE repositories:
 * [matplotlib](https://matplotlib.org/) with cairo and latex backend
 * [seaborn](https://seaborn.pydata.org/)
 * [pandas](https://pandas.pydata.org/)
-* [jupyter](https://jupyter.org/)
-* [graph_tool](https://graph-tool.skewed.de/) installed from openSUSE Build Service
+
+From the openSUSE "home"-repositories:
+
 * [nlopt](http://ab-initio.mit.edu/nlopt) installed from openSUSE Build Service
+* [graph_tool](https://graph-tool.skewed.de/) installed from openSUSE Build Service
+
+Systemwide pip-installation
+
 * [networkx](https://networkx.github.io) installed from pip
 * [pysmt](https://stackoverflow.com/questions/23450572/which-logics-are-supported-by-z3) installed from pip
 * [pyomo](http://www.pyomo.org) installed from pip
- 
+* [control](https://github.com/python-control/python-control)
+* [slycot](https://github.com/python-control/python-control)
 
 #  Usage
 

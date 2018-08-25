@@ -39,13 +39,7 @@ RUN zypper --non-interactive install \
     python3-matplotlib-latex \
     python3-seaborn \
     python3-pandas \
-    python3-pip \
-    python3-jupyter \
-    python3-jupyter_console \
-    python3-jupyter_notebook \
-    python3-jupyter_notebook-latex \
-    python3-jupyter_ipywidgets \
-    python3-jupyter_ipyparallel
+    python3-pip
 
 # smt-solver
 RUN zypper --non-interactive install \    
@@ -62,7 +56,9 @@ RUN zypper --non-interactive install \
 # non-packaged python tools
 RUN pip3 install networkx \
     pysmt \
-    pyomo
+    pyomo \
+    slycot \
+    control
 
 ####### Finish Building Container
 
