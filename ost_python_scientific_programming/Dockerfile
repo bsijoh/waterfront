@@ -25,6 +25,7 @@ RUN zypper --non-interactive \
     
 RUN zypper --non-interactive --gpg-auto-import-keys refresh 
 
+#generic stuff
 RUN zypper --non-interactive install \
     vim \
     bash \
@@ -41,25 +42,44 @@ RUN zypper --non-interactive install \
     python3-pandas \
     python3-pip
 
-# smt-solver
+
+# network/graph libraries
+# install stuff from openSUSE Build Service    
+RUN zypper --non-interactive install \
+    python3-graph_tool
+
+RUN pip3 install networkx    
+    
+# smt stuff
 RUN zypper --non-interactive install \    
     z3 \
     z3-devel \
     python3-z3
-
-
+    
+RUN pip3 install pysmt
+    
+# optimization stuff
 # install stuff from openSUSE Build Service    
 RUN zypper --non-interactive install \
-    python3-graph_tool \
     python3-nlopt   
     
-# non-packaged python tools
-RUN pip3 install networkx \
-    pysmt \
-    pyomo \
+RUN pip3 install \
+    pyomo
+    
+# control stuff
+# requirements for slycot
+RUN zypper --non-interactive install \
+    python3-numpy-devel \
+    gcc-fortran
+
+RUN pip3 install \
     slycot \
     control
 
+RUN zypper --non-interactive remove --clean-deps \
+    python3-numpy-devel \
+    gcc-fortran
+    
 ####### Finish Building Container
 
 # set locale
