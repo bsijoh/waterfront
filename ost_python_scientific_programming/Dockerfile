@@ -32,6 +32,7 @@ RUN zypper --non-interactive install \
     glibc-locale \
     sshfs \
     python3 \
+    python3-xmltodict \
     python3-numpy \
     python3-scipy \
     python3-matplotlib \
