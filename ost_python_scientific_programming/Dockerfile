@@ -65,7 +65,8 @@ RUN zypper --non-interactive install \
     python3-nlopt   
     
 RUN pip3 install \
-    pyomo
+    pyomo \
+    pulp
     
 # control stuff
 # requirements for slycot
