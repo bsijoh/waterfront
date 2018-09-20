@@ -42,6 +42,9 @@ RUN zypper --non-interactive install \
     python3-seaborn \
     python3-pandas \
     python3-pip
+    
+RUN pip3 install --no-cache-dir \
+    dill
 
 
 # network/graph libraries
@@ -49,7 +52,8 @@ RUN zypper --non-interactive install \
 RUN zypper --non-interactive install \
     python3-graph_tool
 
-RUN pip3 install networkx    
+RUN pip3 install --no-cache-dir \
+    networkx    
     
 # smt stuff
 RUN zypper --non-interactive install \    
@@ -57,14 +61,15 @@ RUN zypper --non-interactive install \
     z3-devel \
     python3-z3
     
-RUN pip3 install pysmt
+RUN pip3 install --no-cache-dir \
+    pysmt
     
 # optimization stuff
 # install stuff from openSUSE Build Service    
 RUN zypper --non-interactive install \
     python3-nlopt   
     
-RUN pip3 install \
+RUN pip3 install --no-cache-dir \
     pyomo \
     pulp
     
@@ -74,7 +79,7 @@ RUN zypper --non-interactive install \
     python3-numpy-devel \
     gcc-fortran
 
-RUN pip3 install \
+RUN pip3 install --no-cache-dir \
     slycot \
     control
 
@@ -83,6 +88,8 @@ RUN zypper --non-interactive remove --clean-deps \
     gcc-fortran
     
 ####### Finish Building Container
+
+RUN zypper clean --all
 
 # set locale
 RUN sed "s/RC_LC_ALL=\"\"/RC_LC_ALL=\"en_US.UTF-8\"/g" --in-place /etc/sysconfig/language
