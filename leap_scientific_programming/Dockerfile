@@ -21,7 +21,7 @@ RUN useradd --create-home --shell /bin/bash --uid $WATERFRONT_UID $WATERFRONT_US
 RUN zypper --non-interactive \
     --gpg-auto-import-keys addrepo \
     --priority 90 \
-    --repo https://download.opensuse.org/repositories/home:/bsijoh/openSUSE_Tumbleweed/home:bsijoh.repo
+    --repo https://download.opensuse.org/repositories/home:/bsijoh/openSUSE_Leap_15.0/home:bsijoh.repo
     
 RUN zypper --non-interactive --gpg-auto-import-keys refresh 
 
