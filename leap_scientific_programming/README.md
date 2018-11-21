@@ -15,6 +15,7 @@ From the openSUSE repositories:
 * [matplotlib](https://matplotlib.org/) with cairo and latex backend
 * [seaborn](https://seaborn.pydata.org/)
 * [pandas](https://pandas.pydata.org/)
+* [glpk](https://www.gnu.org/software/glpk/) to have at least one ILP solver aboard
 
 From the openSUSE "home"-repositories:
 
@@ -23,9 +24,9 @@ From the openSUSE "home"-repositories:
 
 Systemwide pip-installation
 
-* [networkx](https://networkx.github.io) installed from pip
-* [pysmt](https://stackoverflow.com/questions/23450572/which-logics-are-supported-by-z3) installed from pip
-* [pyomo](http://www.pyomo.org) installed from pip
+* [networkx](https://networkx.github.io)
+* [pysmt](https://stackoverflow.com/questions/23450572/which-logics-are-supported-by-z3)
+* [pyomo](http://www.pyomo.org)
 * [control](https://github.com/python-control/python-control)
 * [slycot](https://github.com/python-control/python-control)
 

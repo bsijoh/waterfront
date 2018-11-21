@@ -67,7 +67,8 @@ RUN pip3 install --no-cache-dir \
 # optimization stuff
 # install stuff from openSUSE Build Service    
 RUN zypper --non-interactive install \
-    python3-nlopt   
+    python3-nlopt \
+    glpk
     
 RUN pip3 install --no-cache-dir \
     pyomo \
