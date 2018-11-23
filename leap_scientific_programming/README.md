@@ -29,6 +29,8 @@ Systemwide pip-installation
 * [pyomo](http://www.pyomo.org)
 * [control](https://github.com/python-control/python-control)
 * [slycot](https://github.com/python-control/python-control)
+* [dill](https://pypi.org/project/dill/)
+* [cloudpickle](https://github.com/cloudpipe/cloudpickle)
 
 #  Usage
 
