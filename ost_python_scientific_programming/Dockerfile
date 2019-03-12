@@ -99,7 +99,7 @@ WORKDIR /home/$WATERFRONT_USER/
 RUN ldconfig
 
 # for sshfs / fuse
-RUN chmod +x /usr/bin/fusermount
+RUN chmod +x /usr/bin/fusermount3
 RUN mkdir /mnt/mntpt1
 RUN chown $WATERFRONT_USER:users /mnt/mntpt1
 
