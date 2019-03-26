@@ -32,6 +32,7 @@ RUN set -eux; \
         python3-matplotlib-cairo \
         python3-matplotlib-latex \
         python3-seaborn \
+        python3-xlrd \
         python3-pandas \
         python3-pip \
         python3-jupyter \
