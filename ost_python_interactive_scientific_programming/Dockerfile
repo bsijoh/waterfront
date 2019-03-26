@@ -35,6 +35,7 @@ RUN set -eux; \
         python3-xlrd \
         python3-pandas \
         python3-pip \
+        pandoc \
         python3-jupyter \
         python3-jupyter_notebook \
         python3-jupyter_notebook-latex \
