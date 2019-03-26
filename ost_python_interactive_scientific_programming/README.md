@@ -82,6 +82,8 @@ docker run --rm -e LOCAL_USER_ID=`id -u $USER` -v<host directory owned by $USER>
 
 ```
 
+If it dooesn't work, check what SELinux does. Or apparmor.
+
 
 
 # Security

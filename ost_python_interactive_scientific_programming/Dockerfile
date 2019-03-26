@@ -36,6 +36,7 @@ RUN set -eux; \
         python3-pandas \
         python3-pip \
         pandoc \
+        texlive-xetex \
         python3-jupyter \
         python3-jupyter_notebook \
         python3-jupyter_notebook-latex \
