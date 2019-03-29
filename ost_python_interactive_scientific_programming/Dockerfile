@@ -33,10 +33,12 @@ RUN set -eux; \
         python3-matplotlib-latex \
         python3-seaborn \
         python3-xlrd \
+        python3-openpyxl \
         python3-pandas \
         python3-pip \
         pandoc \
         texlive-xetex \
+        texlive-mathpazo \
         python3-jupyter \
         python3-jupyter_notebook \
         python3-jupyter_notebook-latex \
