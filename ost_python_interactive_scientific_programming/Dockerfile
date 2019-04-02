@@ -37,8 +37,12 @@ RUN set -eux; \
         python3-pandas \
         python3-pip \
         pandoc \
-        texlive-xetex \
+        texlive-scheme-small \
         texlive-mathpazo \
+        texlive-fpl \
+        texlive-palatino \
+        texlive-psnfss \
+        texlive-caption \
         python3-jupyter \
         python3-jupyter_notebook \
         python3-jupyter_notebook-latex \
