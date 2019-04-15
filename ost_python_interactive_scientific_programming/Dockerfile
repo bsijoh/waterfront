@@ -31,6 +31,7 @@ RUN set -eux; \
         python3-matplotlib \
         python3-matplotlib-cairo \
         python3-matplotlib-latex \
+        python3-matplotlib-web \
         python3-seaborn \
         python3-xlrd \
         python3-openpyxl \
@@ -47,7 +48,9 @@ RUN set -eux; \
         python3-jupyter_notebook \
         python3-jupyter_notebook-latex \
         python3-jupyter_console \
-        python3-jupyter_ipympl; \
+        python3-jupyter_ipympl \
+        python3-jupyter_qgrid \
+        python3-jupyter_ipydatawidgets; \
     \
     pip3 install --no-cache-dir dill; \
     # network/graph libraries
