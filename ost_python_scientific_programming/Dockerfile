@@ -65,12 +65,20 @@ RUN set -eux; \
     # requirements for slycot
     zypper --non-interactive install \
         python3-numpy-devel \
+        cmake \
         gcc-fortran; \
-    pip3 install --no-cache-dir \
+    # next is required, else slycot won't build
+    ln -s /usr/lib64/python3.7/site-packages/numpy /usr/lib/python3.7/site-packages/numpy; \
+    # scikit-build used by slycot
+    pip3 install --no-cache-dir \   
+        scikit-build; \
+    pip3 install --no-cache-dir \   
+        scikit-build \
         slycot \
         control; \
     zypper --non-interactive remove --clean-deps \
         python3-numpy-devel \
+        cmake \
         gcc-fortran;
     
 ######## gosu

@@ -78,16 +78,22 @@ RUN pip3 install --no-cache-dir \
 # control stuff
 # requirements for slycot
 RUN zypper --non-interactive install \
-    python3-numpy-devel \
-    gcc-fortran
-
-RUN pip3 install --no-cache-dir \
-    slycot \
-    control
-
+        python3-numpy-devel \
+        cmake \
+        gcc-fortran;
+    # next is required, else slycot won't build
+RUN ln -s /usr/lib64/python3.6/site-packages/numpy /usr/lib/python3.6/site-packages/numpy;
+    # scikit-build used by slycot
+RUN    pip3 install --no-cache-dir \   
+        scikit-build;
+RUN pip3 install --no-cache-dir \   
+        scikit-build \
+        slycot \
+        control;
 RUN zypper --non-interactive remove --clean-deps \
-    python3-numpy-devel \
-    gcc-fortran
+        python3-numpy-devel \
+        cmake \
+        gcc-fortran;
     
 ####### Finish Building Container
 
