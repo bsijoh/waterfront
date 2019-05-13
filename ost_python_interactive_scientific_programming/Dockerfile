@@ -47,11 +47,23 @@ RUN set -eux; \
         python3-jupyter \
         python3-jupyter_notebook \
         python3-jupyter_notebook-latex \
-        python3-jupyter_console \
-        python3-jupyter_ipympl \
-        python3-jupyter_qgrid \
-        python3-jupyter_ipydatawidgets; \
+        python3-jupyter_widgetsnbextension \
+        python3-jupyter_nbextensions_configurator \
+        python3-jupyter_highlight_selected_word \
+        python3-jupyter_sphinx \
+        python3-jupyter_nbsphinx \
+        python3-jupyter_latex_envs \
+        python3-jupyter_ipywidgets \
+        python3-jupyter_ipyscales \
+        python3-jupyter_console; \
+        # not in repo: python3-jupyter_ipympl python3-jupyter_qgrid;
     \
+    pip3 install --no-cache-dir \
+        ipympl \
+        qgrid; \
+    jupyter nbextension enable --py --sys-prefix ipympl; \
+    jupyter nbextension enable --py --sys-prefix qgrid; \
+    #
     pip3 install --no-cache-dir dill; \
     # network/graph libraries
     # install stuff from openSUSE Build Service    
