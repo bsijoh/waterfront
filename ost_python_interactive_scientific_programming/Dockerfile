@@ -51,10 +51,9 @@ RUN set -eux; \
         python3-jupyter_nbextensions_configurator \
         python3-jupyter_highlight_selected_word \
         python3-jupyter_sphinx \
-        python3-jupyter_nbsphinx \
         python3-jupyter_latex_envs \
         python3-jupyter_ipywidgets \
-        python3-jupyter_ipyscales \
+        python3-jupyter-datatables \
         python3-jupyter_console; \
         # not in repo: python3-jupyter_ipympl python3-jupyter_qgrid;
     \
