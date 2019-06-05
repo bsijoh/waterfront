@@ -46,7 +46,6 @@ RUN set -eux; \
         texlive-caption \
         python3-jupyter \
         python3-jupyter_notebook \
-        python3-jupyter_notebook-latex \
         python3-jupyter_widgetsnbextension \
         python3-jupyter_nbextensions_configurator \
         python3-jupyter_highlight_selected_word \
