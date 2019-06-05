@@ -45,23 +45,20 @@ RUN set -eux; \
         texlive-psnfss \
         texlive-caption \
         python3-jupyter \
-        python3-jupyter_notebook \
+        python3-notebook \
         python3-jupyter_widgetsnbextension \
         python3-jupyter_nbextensions_configurator \
         python3-jupyter_highlight_selected_word \
         python3-jupyter_sphinx \
+        python3-nbsphinx \
         python3-jupyter_latex_envs \
-        python3-jupyter_ipywidgets \
+        python3-ipywidgets \
         python3-jupyter-datatables \
-        python3-jupyter_console; \
-        # not in repo: python3-jupyter_ipympl python3-jupyter_qgrid;
+        python3-jupyter_console \
+        python3-ipympl \
+        python3-qgrid; \
     \
-    pip3 install --no-cache-dir \
-        ipympl \
-        qgrid; \
-    jupyter nbextension enable --py --sys-prefix ipympl; \
-    jupyter nbextension enable --py --sys-prefix qgrid; \
-    #
+    # python serialization
     pip3 install --no-cache-dir dill; \
     # network/graph libraries
     # install stuff from openSUSE Build Service    
