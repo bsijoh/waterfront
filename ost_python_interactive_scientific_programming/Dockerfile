@@ -44,6 +44,8 @@ RUN set -eux; \
         texlive-palatino \
         texlive-psnfss \
         texlive-caption \
+	texlive-adjustbox \
+	texlive-tcolorbox \
         python3-jupyter \
         python3-notebook \
         python3-jupyter_widgetsnbextension \
