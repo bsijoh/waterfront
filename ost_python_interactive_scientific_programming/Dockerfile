@@ -44,21 +44,34 @@ RUN set -eux; \
         texlive-palatino \
         texlive-psnfss \
         texlive-caption \
-	texlive-adjustbox \
-	texlive-tcolorbox \
-        python3-jupyter \
-        python3-notebook \
-        python3-jupyter_widgetsnbextension \
-        python3-jupyter_nbextensions_configurator \
-        python3-jupyter_highlight_selected_word \
-        python3-jupyter_sphinx \
-        python3-nbsphinx \
-        python3-jupyter_latex_envs \
-        python3-ipywidgets \
-        python3-jupyter-datatables \
-        python3-jupyter_console \
-        python3-ipympl \
-        python3-qgrid; \
+        texlive-adjustbox \
+        texlive-tcolorbox \
+        jupyter \
+        jupyter-doc \
+        jupyter-qgrid \
+        jupyter-vispy \
+        jupyter-nbdime \
+        jupyter-ipympl \
+        jupyter-notebook \
+        jupyter-nbformat \
+        jupyter-jupytext \
+        jupyter-ipysheet \
+        jupyter-nbconvert \
+        jupyter-ipykernel \
+        jupyter-hide_code \
+        jupyter-ipyscales \
+        jupyter-notebook-latex \
+        jupyter-nbconvert-latex \
+        jupyter-jupyter_latex_envs \
+        jupyter-ipydatawidgets \
+        jupyter-widgetsnbextension \
+        jupyter-jupyter_nbextensions_configurator \
+        jupyter-jupyter_highlight_selected_word \
+        jupyter-jupyter-full-width \
+        jupyter-jupyter-server \
+        jupyter-jupyter_console \
+        jupyter-jupyter-require \
+        jupyter-jupyterbgnotify \
     \
     # python serialization
     pip3 install --no-cache-dir dill; \
