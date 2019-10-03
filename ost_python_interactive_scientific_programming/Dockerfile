@@ -71,7 +71,7 @@ RUN set -eux; \
         jupyter-jupyter-server \
         jupyter-jupyter_console \
         jupyter-jupyter-require \
-        jupyter-jupyterbgnotify \
+        jupyter-jupyterbgnotify; \
     \
     # python serialization
     pip3 install --no-cache-dir dill; \
